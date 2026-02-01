@@ -55,17 +55,33 @@ export default function CertificatePage() {
         position: 'fixed',
         top: '20px',
         left: '20px',
-        padding: '12px 20px',
-        backgroundColor: '#e74c3c',
-        color: 'white',
+        padding: '12px',
+        backgroundColor: 'transparent',
+        color: '#d40000',
         textDecoration: 'none',
-        borderRadius: '6px',
-        fontSize: '14px',
+        fontSize: '50px',
         fontWeight: 'bold',
         transition: 'all 0.3s ease',
-        zIndex: 1000
-      }}>
-        ← Back to Summary
+        zIndex: 1000,
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        borderRadius: '50%',
+        width: '80px',
+        height: '80px'
+      }}
+      onMouseOver={(e) => {
+        e.currentTarget.style.color = '#b30000'
+        e.currentTarget.style.transform = 'translateX(-8px) scale(1.1)'
+        e.currentTarget.style.textShadow = '2px 2px 4px rgba(212, 64, 0, 0.3)'
+      }}
+      onMouseOut={(e) => {
+        e.currentTarget.style.color = '#d40000'
+        e.currentTarget.style.transform = 'translateX(0) scale(1)'
+        e.currentTarget.style.textShadow = 'none'
+      }}
+      >
+        «
       </Link>
 
       {/* Full Certificate */}
