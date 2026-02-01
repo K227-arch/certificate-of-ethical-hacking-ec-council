@@ -1,15 +1,26 @@
 'use client'
 
 import Image from 'next/image'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Link from 'next/link'
 
 export default function CertificatePage() {
   const [isDark, setIsDark] = useState(false)
+  const [isMobile, setIsMobile] = useState(false)
 
   const toggleTheme = () => {
     setIsDark(!isDark)
   }
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth <= 768)
+    }
+    
+    checkMobile()
+    window.addEventListener('resize', checkMobile)
+    return () => window.removeEventListener('resize', checkMobile)
+  }, [])
 
   return (
     <main style={{
@@ -18,7 +29,7 @@ export default function CertificatePage() {
       alignItems: 'center',
       justifyContent: 'center',
       minHeight: '100vh',
-      padding: '20px',
+      padding: isMobile ? '15px' : '20px',
       backgroundColor: isDark ? '#1a1a1a' : '#f5f5f5',
       transition: 'background-color 0.3s ease'
     }}>
@@ -27,20 +38,20 @@ export default function CertificatePage() {
         onClick={toggleTheme}
         style={{
           position: 'fixed',
-          top: '20px',
-          right: '20px',
+          top: isMobile ? '15px' : '20px',
+          right: isMobile ? '15px' : '20px',
           padding: '0',
           borderRadius: '50%',
           border: 'none',
           backgroundColor: '#d40000',
           color: 'white',
           cursor: 'pointer',
-          fontSize: '20px',
+          fontSize: isMobile ? '16px' : '20px',
           boxShadow: '0 2px 8px rgba(212, 64, 0, 0.3)',
           transition: 'all 0.3s ease',
           zIndex: 1000,
-          width: '48px',
-          height: '48px',
+          width: isMobile ? '36px' : '48px',
+          height: isMobile ? '36px' : '48px',
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center'
@@ -62,13 +73,13 @@ export default function CertificatePage() {
       {/* Back Button */}
       <Link href="/" style={{
         position: 'fixed',
-        top: '4px',
-        left: '20px',
+        top: isMobile ? '10px' : '4px',
+        left: isMobile ? '15px' : '20px',
         padding: '0',
         backgroundColor: 'transparent',
         color: '#d40000',
         textDecoration: 'none',
-        fontSize: '50px',
+        fontSize: isMobile ? '32px' : '50px',
         fontWeight: 'bold',
         transition: 'all 0.3s ease',
         zIndex: 1000,
@@ -76,8 +87,8 @@ export default function CertificatePage() {
         alignItems: 'center',
         justifyContent: 'center',
         borderRadius: '50%',
-        width: '80px',
-        height: '80px'
+        width: isMobile ? '56px' : '80px',
+        height: isMobile ? '56px' : '80px'
       }}
       onMouseOver={(e) => {
         e.currentTarget.style.color = '#b30000'
@@ -95,12 +106,15 @@ export default function CertificatePage() {
 
       {/* Full Certificate */}
       <div style={{
-        maxWidth: '95%',
+        maxWidth: isMobile ? '100%' : '95%',
+        width: '100%',
         boxShadow: isDark ? '0 4px 8px rgba(0,0,0,0.5)' : '0 4px 8px rgba(0,0,0,0.1)',
         borderRadius: '8px',
         overflow: 'hidden',
         backgroundColor: isDark ? '#2a2a2a' : 'white',
-        transition: 'all 0.3s ease'
+        transition: 'all 0.3s ease',
+        marginTop: isMobile ? '70px' : '90px',
+        marginBottom: isMobile ? '15px' : '30px'
       }}>
         <Image
           src="/certificate.jpeg"
@@ -117,11 +131,14 @@ export default function CertificatePage() {
 
       {/* Download/Print Options */}
       <div style={{
-        marginTop: '30px',
+        marginTop: isMobile ? '15px' : '30px',
         display: 'flex',
-        gap: '15px',
+        gap: isMobile ? '10px' : '15px',
         flexWrap: 'wrap',
-        justifyContent: 'center'
+        justifyContent: 'center',
+        flexDirection: isMobile ? 'column' : 'row',
+        width: isMobile ? '100%' : 'auto',
+        maxWidth: isMobile ? '280px' : 'none'
       }}>
         <button
           onClick={() => window.print()}
@@ -129,12 +146,13 @@ export default function CertificatePage() {
             backgroundColor: '#000',
             color: '#d40000',
             border: 'none',
-            padding: '12px 24px',
+            padding: isMobile ? '10px 16px' : '12px 24px',
             borderRadius: '6px',
             cursor: 'pointer',
-            fontSize: '14px',
+            fontSize: isMobile ? '12px' : '14px',
             fontWeight: 'bold',
-            transition: 'all 0.3s ease'
+            transition: 'all 0.3s ease',
+            width: isMobile ? '100%' : 'auto'
           }}
           onMouseOver={(e) => {
             e.currentTarget.style.backgroundColor = '#333'
@@ -153,12 +171,15 @@ export default function CertificatePage() {
             backgroundColor: '#000',
             color: '#d40000',
             textDecoration: 'none',
-            padding: '12px 24px',
+            padding: isMobile ? '10px 16px' : '12px 24px',
             borderRadius: '6px',
-            fontSize: '14px',
+            fontSize: isMobile ? '12px' : '14px',
             fontWeight: 'bold',
             transition: 'all 0.3s ease',
-            display: 'inline-block'
+            display: 'inline-block',
+            textAlign: 'center',
+            width: isMobile ? '100%' : 'auto',
+            boxSizing: 'border-box'
           }}
           onMouseOver={(e) => {
             e.currentTarget.style.backgroundColor = '#333'

@@ -81,64 +81,66 @@ export default function Home() {
         flexDirection: 'column',
         alignItems: 'center',
         justifyContent: 'flex-start',
-        padding: isMobile ? '20px 15px' : '40px 20px'
+        padding: isMobile ? '15px 10px' : '40px 20px'
       }}>
         {/* Certificate Summary Card */}
         <div style={{
-          maxWidth: '1000px',
+          maxWidth: isMobile ? '100%' : '1000px',
           width: '100%',
           backgroundColor: 'white',
           borderRadius: '8px',
-          padding: isMobile ? '20px' : '30px',
+          padding: isMobile ? '15px' : '30px',
           marginBottom: '40px',
           boxShadow: '0 4px 8px rgba(0,0,0,0.1)'
         }}>
           {/* Name Header */}
           <h1 style={{
-            fontSize: isMobile ? '28px' : '32px',
+            fontSize: isMobile ? '22px' : '32px',
             fontWeight: '700',
             color: '#d40000',
-            marginBottom: '30px',
+            marginBottom: isMobile ? '20px' : '30px',
             borderBottom: '2px solid #eee',
             paddingBottom: '10px',
-            textAlign: isMobile ? 'center' : 'left'
+            textAlign: 'center'
           }}>
             Twesigye Keith
           </h1>
 
           <div style={{
             display: 'flex',
-            gap: isMobile ? '20px' : '30px',
-            alignItems: 'flex-start',
+            gap: isMobile ? '15px' : '30px',
+            alignItems: isMobile ? 'center' : 'flex-start',
             flexWrap: 'wrap',
-            flexDirection: isMobile ? 'column' : 'row'
+            flexDirection: isMobile ? 'column' : 'row',
+            justifyContent: isMobile ? 'center' : 'flex-start'
           }}>
             {/* Certificate Badge */}
             <div style={{
               backgroundColor: '#2980b9',
               borderRadius: '10px',
-              padding: '15px',
+              padding: isMobile ? '12px' : '15px',
               color: 'white',
               textAlign: 'center',
-              minWidth: '150px',
+              minWidth: isMobile ? '130px' : '150px',
+              maxWidth: isMobile ? '200px' : 'none',
               position: 'relative',
-              alignSelf: isMobile ? 'center' : 'flex-start',
+              alignSelf: 'center',
               boxShadow: '0 3px 9px rgba(0,0,0,0.15)'
             }}>
               {/* White inner card */}
               <div style={{
                 backgroundColor: 'white',
                 borderRadius: '6px',
-                padding: '18px 12px',
-                margin: '8px',
+                padding: isMobile ? '15px 10px' : '18px 12px',
+                margin: isMobile ? '6px' : '8px',
                 position: 'relative'
               }}>
                 {/* EC-Council header */}
                 <div style={{
                   color: '#d40000',
-                  fontSize: '13px',
+                  fontSize: isMobile ? '11px' : '13px',
                   fontWeight: 'bold',
-                  marginBottom: '12px',
+                  marginBottom: isMobile ? '10px' : '12px',
                   letterSpacing: '0.8px'
                 }}>
                   EC-Council
@@ -147,13 +149,13 @@ export default function Home() {
                 {/* CEH with red line */}
                 <div style={{
                   position: 'relative',
-                  marginBottom: '10px'
+                  marginBottom: isMobile ? '8px' : '10px'
                 }}>
                   <div style={{
-                    fontSize: '30px',
+                    fontSize: isMobile ? '24px' : '30px',
                     fontWeight: 'bold',
                     color: '#000',
-                    letterSpacing: '4px',
+                    letterSpacing: isMobile ? '3px' : '4px',
                     position: 'relative'
                   }}>
                     C<span style={{color: '#d40000'}}>|</span>EH
@@ -162,9 +164,9 @@ export default function Home() {
                 
                 {/* Subtitle */}
                 <div style={{
-                  fontSize: '8px',
+                  fontSize: isMobile ? '7px' : '8px',
                   color: '#666',
-                  marginBottom: '12px',
+                  marginBottom: isMobile ? '10px' : '12px',
                   letterSpacing: '1.5px'
                 }}>
                   Certified | Ethical | Hacker
@@ -174,11 +176,11 @@ export default function Home() {
                 <div style={{
                   backgroundColor: '#000',
                   color: 'white',
-                  padding: '5px 10px',
-                  fontSize: '12px',
+                  padding: isMobile ? '4px 8px' : '5px 10px',
+                  fontSize: isMobile ? '10px' : '12px',
                   fontWeight: 'bold',
                   letterSpacing: '2px',
-                  marginBottom: '10px'
+                  marginBottom: isMobile ? '8px' : '10px'
                 }}>
                   CERTIFIED
                 </div>
@@ -189,26 +191,30 @@ export default function Home() {
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
-                gap: '5px',
-                marginTop: '10px',
-                fontSize: '12px',
+                gap: isMobile ? '4px' : '5px',
+                marginTop: isMobile ? '8px' : '10px',
+                fontSize: isMobile ? '10px' : '12px',
                 fontWeight: 'bold'
               }}>
                 <span style={{
                   color: '#4CAF50',
-                  fontSize: '14px'
+                  fontSize: isMobile ? '12px' : '14px'
                 }}>✓</span>
                 <span style={{ color: 'white' }}>Verified</span>
               </div>
             </div>
 
             {/* Certificate Details */}
-            <div style={{ flex: 1, minWidth: isMobile ? '100%' : '300px' }}>
+            <div style={{ 
+              flex: 1, 
+              minWidth: isMobile ? '100%' : '300px',
+              width: isMobile ? '100%' : 'auto'
+            }}>
               <h2 style={{
-                fontSize: isMobile ? '18px' : '20px',
+                fontSize: isMobile ? '16px' : '20px',
                 fontWeight: '600',
                 color: '#333',
-                marginTop: isMobile ? '0' : '28px',
+                marginTop: isMobile ? '15px' : '28px',
                 marginBottom: '15px'
               }}>
                 Certification Details:
@@ -218,7 +224,7 @@ export default function Home() {
                 color: '#666',
                 lineHeight: '1.6',
                 marginBottom: '20px',
-                fontSize: isMobile ? '15px' : '16px'
+                fontSize: isMobile ? '13px' : '16px'
               }}>
                 A Certified Ethical Hacker is a skilled professional who understands and knows how to look for weaknesses and
                 vulnerabilities in target systems and uses the same knowledge and tools as a malicious hacker, but in a lawful and
