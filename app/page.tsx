@@ -116,54 +116,89 @@ export default function Home() {
             {/* Certificate Badge */}
             <div style={{
               backgroundColor: '#2980b9',
-              borderRadius: '8px',
-              padding: '20px',
+              borderRadius: '10px',
+              padding: '15px',
               color: 'white',
               textAlign: 'center',
               minWidth: '150px',
               position: 'relative',
-              alignSelf: isMobile ? 'center' : 'flex-start'
+              alignSelf: isMobile ? 'center' : 'flex-start',
+              boxShadow: '0 3px 9px rgba(0,0,0,0.15)'
             }}>
+              {/* White inner card */}
               <div style={{
                 backgroundColor: 'white',
-                color: '#2980b9',
-                padding: '8px',
-                borderRadius: '4px',
-                marginBottom: '10px',
-                fontSize: '12px',
-                fontWeight: 'bold'
+                borderRadius: '6px',
+                padding: '18px 12px',
+                margin: '8px',
+                position: 'relative'
               }}>
-                EC-Council
+                {/* EC-Council header */}
+                <div style={{
+                  color: '#d40000',
+                  fontSize: '13px',
+                  fontWeight: 'bold',
+                  marginBottom: '12px',
+                  letterSpacing: '0.8px'
+                }}>
+                  EC-Council
+                </div>
+                
+                {/* CEH with red line */}
+                <div style={{
+                  position: 'relative',
+                  marginBottom: '10px'
+                }}>
+                  <div style={{
+                    fontSize: '30px',
+                    fontWeight: 'bold',
+                    color: '#000',
+                    letterSpacing: '4px',
+                    position: 'relative'
+                  }}>
+                    C<span style={{color: '#d40000'}}>|</span>EH
+                  </div>
+                </div>
+                
+                {/* Subtitle */}
+                <div style={{
+                  fontSize: '8px',
+                  color: '#666',
+                  marginBottom: '12px',
+                  letterSpacing: '1.5px'
+                }}>
+                  Certified | Ethical | Hacker
+                </div>
+                
+                {/* Certified text */}
+                <div style={{
+                  backgroundColor: '#000',
+                  color: 'white',
+                  padding: '5px 10px',
+                  fontSize: '12px',
+                  fontWeight: 'bold',
+                  letterSpacing: '2px',
+                  marginBottom: '10px'
+                }}>
+                  CERTIFIED
+                </div>
               </div>
+              
+              {/* Verified badge */}
               <div style={{
-                fontSize: '24px',
-                fontWeight: 'bold',
-                marginBottom: '5px'
-              }}>
-                CEH
-              </div>
-              <div style={{
-                fontSize: '12px',
-                marginBottom: '15px'
-              }}>
-                Certified Ethical Hacker
-              </div>
-              <div style={{
-                backgroundColor: 'white',
-                color: '#2980b9',
-                padding: '8px',
-                borderRadius: '4px',
-                fontSize: '14px',
-                fontWeight: 'bold'
-              }}>
-                CERTIFIED
-              </div>
-              <div style={{
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                gap: '5px',
                 marginTop: '10px',
                 fontSize: '12px',
-                color: '#4CAF50'
+                fontWeight: 'bold'
               }}>
-                ✓ Verified
+                <span style={{
+                  color: '#4CAF50',
+                  fontSize: '14px'
+                }}>✓</span>
+                <span style={{ color: 'white' }}>Verified</span>
               </div>
             </div>
 
