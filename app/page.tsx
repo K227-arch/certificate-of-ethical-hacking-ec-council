@@ -85,7 +85,7 @@ export default function Home() {
       }}>
         {/* Certificate Summary Card */}
         <div style={{
-          maxWidth: '800px',
+          maxWidth: '1000px',
           width: '100%',
           backgroundColor: 'white',
           borderRadius: '8px',
@@ -317,6 +317,82 @@ export default function Home() {
                 <p style={{ color: '#666', fontSize: isMobile ? '15px' : '16px' }}>
                   Reconnaissance, Gaining Access, Enumeration, Maintaining Access, and covering your tracks.
                 </p>
+              </div>
+
+              {/* ANSI Accreditation Section */}
+              <div style={{ marginBottom: '20px' }}>
+                <h4 style={{ 
+                  color: '#333', 
+                  marginBottom: '15px',
+                  fontSize: isMobile ? '17px' : '18px',
+                  fontWeight: '600'
+                }}>Standards:</h4>
+                
+                <div style={{
+                  display: 'flex',
+                  flexDirection: 'column',
+                  alignItems: 'flex-start',
+                  gap: '10px'
+                }}>
+                  {/* ANSI Logo */}
+                  <div style={{
+                    backgroundColor: '#2980b9',
+                    borderRadius: '50%',
+                    width: isMobile ? '80px' : '100px',
+                    height: isMobile ? '50px' : '60px',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    position: 'relative',
+                    boxShadow: '0 2px 8px rgba(41, 128, 185, 0.3)'
+                  }}>
+                    <div style={{
+                      color: 'white',
+                      fontSize: isMobile ? '16px' : '20px',
+                      fontWeight: 'bold',
+                      letterSpacing: '2px'
+                    }}>
+                      ANSI
+                    </div>
+                    <div style={{
+                      position: 'absolute',
+                      bottom: '8px',
+                      color: 'white',
+                      fontSize: isMobile ? '8px' : '10px',
+                      fontWeight: 'bold'
+                    }}>
+                      ACCREDITED
+                    </div>
+                  </div>
+                  
+                  {/* ANSI Text */}
+                  <div style={{
+                    textAlign: 'left',
+                    color: '#666'
+                  }}>
+                    <div style={{
+                      fontSize: isMobile ? '14px' : '16px',
+                      fontWeight: '600',
+                      marginBottom: '5px'
+                    }}>
+                      ANSI Accredited Program
+                    </div>
+                    <div style={{
+                      fontSize: isMobile ? '12px' : '14px',
+                      fontWeight: 'bold',
+                      letterSpacing: '1px'
+                    }}>
+                      PERSONNEL CERTIFICATION
+                    </div>
+                    <div style={{
+                      fontSize: isMobile ? '11px' : '13px',
+                      marginTop: '5px',
+                      fontWeight: '600'
+                    }}>
+                      17024
+                    </div>
+                  </div>
+                </div>
               </div>
 
               <Link
