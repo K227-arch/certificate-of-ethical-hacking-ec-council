@@ -32,19 +32,23 @@ export default function CertificatePage() {
           padding: '12px',
           borderRadius: '50%',
           border: 'none',
-          backgroundColor: isDark ? '#333' : '#fff',
-          color: isDark ? '#fff' : '#333',
+          backgroundColor: '#d40000',
+          color: 'white',
           cursor: 'pointer',
           fontSize: '20px',
-          boxShadow: '0 2px 8px rgba(0,0,0,0.2)',
+          boxShadow: '0 2px 8px rgba(212, 64, 0, 0.3)',
           transition: 'all 0.3s ease',
           zIndex: 1000
         }}
         onMouseOver={(e) => {
           e.currentTarget.style.transform = 'scale(1.1)'
+          e.currentTarget.style.backgroundColor = '#b30000'
+          e.currentTarget.style.boxShadow = '0 4px 12px rgba(212, 64, 0, 0.4)'
         }}
         onMouseOut={(e) => {
           e.currentTarget.style.transform = 'scale(1)'
+          e.currentTarget.style.backgroundColor = '#d40000'
+          e.currentTarget.style.boxShadow = '0 2px 8px rgba(212, 64, 0, 0.3)'
         }}
       >
         {isDark ? '☀️' : '🌙'}
