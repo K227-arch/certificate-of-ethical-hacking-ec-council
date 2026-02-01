@@ -106,7 +106,7 @@ export default function CertificatePage() {
 
       {/* Full Certificate */}
       <div style={{
-        maxWidth: isMobile ? '100%' : '95%',
+        maxWidth: '40%',
         width: '100%',
         boxShadow: isDark ? '0 4px 8px rgba(0,0,0,0.5)' : '0 4px 8px rgba(0,0,0,0.1)',
         borderRadius: '8px',
