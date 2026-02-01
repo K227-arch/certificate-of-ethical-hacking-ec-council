@@ -68,16 +68,6 @@ export default function CertificatePage() {
         ← Back to Summary
       </Link>
 
-      {/* Certificate Title */}
-      <h1 style={{
-        color: isDark ? '#fff' : '#333',
-        marginBottom: '30px',
-        textAlign: 'center',
-        fontSize: '28px'
-      }}>
-        Twesigye Keith - Certified Ethical Hacker
-      </h1>
-
       {/* Full Certificate */}
       <div style={{
         maxWidth: '95%',

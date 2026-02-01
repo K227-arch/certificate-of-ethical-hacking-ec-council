@@ -60,19 +60,16 @@ export default function Home() {
             alignItems: 'center'
           }}>
             <a href="#" style={{
-              color: 'white',
+              color: '#d40000',
               textDecoration: 'none',
-              fontSize: isMobile ? '11px' : '12px'
-            }}>Contact</a>
-            <a href="#" style={{
-              color: 'white',
-              textDecoration: 'none',
-              fontSize: isMobile ? '11px' : '12px'
+              fontSize: isMobile ? '14px' : '16px',
+              fontWeight: 'bold'
             }}>Login</a>
             <a href="#" style={{
-              color: 'white',
+              color: '#d40000',
               textDecoration: 'none',
-              fontSize: isMobile ? '11px' : '12px'
+              fontSize: isMobile ? '14px' : '16px',
+              fontWeight: 'bold'
             }}>Register</a>
           </div>
         </div>
