@@ -101,8 +101,8 @@ export default function CertificatePage() {
         <button
           onClick={() => window.print()}
           style={{
-            backgroundColor: '#2980b9',
-            color: 'white',
+            backgroundColor: '#000',
+            color: '#d40000',
             border: 'none',
             padding: '12px 24px',
             borderRadius: '6px',
@@ -112,21 +112,21 @@ export default function CertificatePage() {
             transition: 'all 0.3s ease'
           }}
           onMouseOver={(e) => {
-            e.currentTarget.style.backgroundColor = '#1f5f8b'
+            e.currentTarget.style.backgroundColor = '#333'
           }}
           onMouseOut={(e) => {
-            e.currentTarget.style.backgroundColor = '#2980b9'
+            e.currentTarget.style.backgroundColor = '#000'
           }}
         >
-          🖨️ Print Certificate
+          Print Certificate
         </button>
 
         <a
           href="/certificate.jpeg"
           download="Twesigye_Keith_CEH_Certificate.jpeg"
           style={{
-            backgroundColor: '#27ae60',
-            color: 'white',
+            backgroundColor: '#000',
+            color: '#d40000',
             textDecoration: 'none',
             padding: '12px 24px',
             borderRadius: '6px',
@@ -136,13 +136,13 @@ export default function CertificatePage() {
             display: 'inline-block'
           }}
           onMouseOver={(e) => {
-            e.currentTarget.style.backgroundColor = '#1e8449'
+            e.currentTarget.style.backgroundColor = '#333'
           }}
           onMouseOut={(e) => {
-            e.currentTarget.style.backgroundColor = '#27ae60'
+            e.currentTarget.style.backgroundColor = '#000'
           }}
         >
-          📥 Download Certificate
+          Download Certificate
         </a>
       </div>
     </main>

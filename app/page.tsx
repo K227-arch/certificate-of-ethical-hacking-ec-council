@@ -19,7 +19,7 @@ export default function Home() {
   return (
     <div style={{
       fontFamily: 'Arial, Helvetica, sans-serif',
-      fontSize: '14px',
+      fontSize: '16px',
       lineHeight: '1.6',
       color: '#444',
       background: '#fff',
@@ -59,13 +59,13 @@ export default function Home() {
             gap: isMobile ? '15px' : '25px',
             alignItems: 'center'
           }}>
-            <a href="#" style={{
+            <a href="https://www.eccouncil.org/login/" target="_blank" rel="noopener noreferrer" style={{
               color: '#d40000',
               textDecoration: 'none',
               fontSize: isMobile ? '14px' : '16px',
               fontWeight: 'bold'
             }}>Login</a>
-            <a href="#" style={{
+            <a href="https://www.eccouncil.org/register/" target="_blank" rel="noopener noreferrer" style={{
               color: '#d40000',
               textDecoration: 'none',
               fontSize: isMobile ? '14px' : '16px',
@@ -95,7 +95,7 @@ export default function Home() {
         }}>
           {/* Name Header */}
           <h1 style={{
-            fontSize: isMobile ? '24px' : '28px',
+            fontSize: isMobile ? '28px' : '32px',
             fontWeight: '700',
             color: '#d40000',
             marginBottom: '30px',
@@ -170,7 +170,7 @@ export default function Home() {
             {/* Certificate Details */}
             <div style={{ flex: 1, minWidth: isMobile ? '100%' : '300px' }}>
               <h2 style={{
-                fontSize: isMobile ? '16px' : '17px',
+                fontSize: isMobile ? '18px' : '20px',
                 fontWeight: '600',
                 color: '#333',
                 marginTop: isMobile ? '0' : '28px',
@@ -183,7 +183,7 @@ export default function Home() {
                 color: '#666',
                 lineHeight: '1.6',
                 marginBottom: '20px',
-                fontSize: isMobile ? '13px' : '14px'
+                fontSize: isMobile ? '15px' : '16px'
               }}>
                 A Certified Ethical Hacker is a skilled professional who understands and knows how to look for weaknesses and
                 vulnerabilities in target systems and uses the same knowledge and tools as a malicious hacker, but in a lawful and
@@ -196,7 +196,7 @@ export default function Home() {
                 <table style={{
                   width: '100%',
                   borderCollapse: 'collapse',
-                  fontSize: isMobile ? '11px' : '13px',
+                  fontSize: isMobile ? '13px' : '15px',
                   marginBottom: '20px',
                   minWidth: isMobile ? '500px' : 'auto'
                 }}>
@@ -276,10 +276,10 @@ export default function Home() {
                 <h4 style={{
                   color: '#333',
                   marginBottom: '8px',
-                  fontSize: isMobile ? '15px' : '16px',
+                  fontSize: isMobile ? '17px' : '18px',
                   fontWeight: '600'
                 }}>Skills:</h4>
-                <p style={{ color: '#666', fontSize: isMobile ? '13px' : '14px' }}>
+                <p style={{ color: '#666', fontSize: isMobile ? '15px' : '16px' }}>
                   Reconnaissance, Gaining Access, Enumeration, Maintaining Access, and covering your tracks.
                 </p>
               </div>
@@ -292,7 +292,7 @@ export default function Home() {
                   textDecoration: 'none',
                   padding: isMobile ? '10px 20px' : '12px 24px',
                   borderRadius: '6px',
-                  fontSize: isMobile ? '13px' : '14px',
+                  fontSize: isMobile ? '15px' : '16px',
                   fontWeight: 'bold',
                   transition: 'all 0.3s ease',
                   display: 'inline-block',
