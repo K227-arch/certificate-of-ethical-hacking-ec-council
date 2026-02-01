@@ -11,14 +11,6 @@ export default function Home() {
       padding: '20px',
       backgroundColor: '#f5f5f5'
     }}>
-      <h1 style={{
-        marginBottom: '30px',
-        color: '#333',
-        textAlign: 'center'
-      }}>
-        Ethical Hacking Certificate
-      </h1>
-      
       <div style={{
         maxWidth: '90%',
         boxShadow: '0 4px 8px rgba(0,0,0,0.1)',
