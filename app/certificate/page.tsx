@@ -29,7 +29,7 @@ export default function CertificatePage() {
           position: 'fixed',
           top: '20px',
           right: '20px',
-          padding: '12px',
+          padding: '0',
           borderRadius: '50%',
           border: 'none',
           backgroundColor: '#d40000',
@@ -38,7 +38,12 @@ export default function CertificatePage() {
           fontSize: '20px',
           boxShadow: '0 2px 8px rgba(212, 64, 0, 0.3)',
           transition: 'all 0.3s ease',
-          zIndex: 1000
+          zIndex: 1000,
+          width: '48px',
+          height: '48px',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center'
         }}
         onMouseOver={(e) => {
           e.currentTarget.style.transform = 'scale(1.1)'
@@ -57,9 +62,9 @@ export default function CertificatePage() {
       {/* Back Button */}
       <Link href="/" style={{
         position: 'fixed',
-        top: '20px',
+        top: '4px',
         left: '20px',
-        padding: '12px',
+        padding: '0',
         backgroundColor: 'transparent',
         color: '#d40000',
         textDecoration: 'none',
