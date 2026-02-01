@@ -101,7 +101,7 @@ export default function Home() {
             marginBottom: isMobile ? '20px' : '30px',
             borderBottom: '2px solid #eee',
             paddingBottom: '10px',
-            textAlign: 'center'
+            textAlign: isMobile ? 'center' : 'left'
           }}>
             Twesigye Keith
           </h1>
@@ -109,10 +109,10 @@ export default function Home() {
           <div style={{
             display: 'flex',
             gap: isMobile ? '15px' : '30px',
-            alignItems: isMobile ? 'center' : 'flex-start',
+            alignItems: 'flex-start',
             flexWrap: 'wrap',
             flexDirection: isMobile ? 'column' : 'row',
-            justifyContent: isMobile ? 'center' : 'flex-start'
+            justifyContent: 'flex-start'
           }}>
             {/* Certificate Badge */}
             <div style={{
@@ -124,7 +124,7 @@ export default function Home() {
               minWidth: isMobile ? '130px' : '150px',
               maxWidth: isMobile ? '200px' : 'none',
               position: 'relative',
-              alignSelf: 'center',
+              alignSelf: isMobile ? 'center' : 'flex-start',
               boxShadow: '0 3px 9px rgba(0,0,0,0.15)'
             }}>
               {/* White inner card */}
